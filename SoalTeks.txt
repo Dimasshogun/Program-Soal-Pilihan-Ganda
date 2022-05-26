@@ -1,0 +1,21 @@
+Lili mempunyai sepuluh cokelat dimakan Lili 3 buah. Berapa sisa cokelat Lili sekarang?
++7
++8
++9
++6
++5
++A
+#Ani bermain karet dengan teman-temannya dari jam 2 siang - jam 5 sore, berapa lama Ani bermain karet?
++1
++2
++3
++4
++5
++C
+#Murid kelas 3 sekolah menengah pertama setiap hari Senin melakukan Upacara bendera dilapangkan sekolah dari pukul 7-9. Hitung lama mereka berada di lapangan upacara?
++1
++2
++3
++4
++5
++B
