@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &605157069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1521,7 +1521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1566236829
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2220,6 +2220,12 @@ MonoBehaviour:
   txtOpsiB: {fileID: 1712035928}
   txtOpsiC: {fileID: 1961838077}
   txtOpsiD: {fileID: 951433073}
+  durasiPenilaian: 3
+  panel: {fileID: 605157068}
+  imgPenilaian: {fileID: 1665297520}
+  imgHasil: {fileID: 1566236828}
+  txtHasil: {fileID: 1307239288}
+  txtPenilaian: {fileID: 1962354692}
 --- !u!4 &2086983935
 Transform:
   m_ObjectHideFlags: 0
