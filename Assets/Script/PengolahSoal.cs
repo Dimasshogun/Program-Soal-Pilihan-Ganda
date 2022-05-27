@@ -13,6 +13,7 @@ public class PengolahSoal : MonoBehaviour
     bool ambilSoal;
     char kunciJ;
 
+    bool[] soalSelesai;
     // komponen UI
     public Text txtSoal, txtOpsiA, txtOpsiB, txtOpsiC, txtOpsiD;
     bool isHasil;
@@ -30,6 +31,8 @@ public class PengolahSoal : MonoBehaviour
     {
         durasi = durasiPenilaian;
         soal = assetSoal.ToString().Split('#');
+        soalSelesai = new bool[soal.Length];
+
         soalBag = new string[soal.Length, 6];
         maxSoal = soal.Length;
         OlahSoal();
@@ -59,14 +62,28 @@ public class PengolahSoal : MonoBehaviour
         {
             if (ambilSoal)
             {
-                txtSoal.text = soalBag[indexSoal, 0];
-                txtOpsiA.text = soalBag[indexSoal, 1];
-                txtOpsiB.text = soalBag[indexSoal, 2];
-                txtOpsiC.text = soalBag[indexSoal, 3];
-                txtOpsiD.text = soalBag[indexSoal, 4];
-                kunciJ = soalBag[indexSoal, 5][0];
+                for (int i=0; i < soal.Length; i++)
+                {
+                    int randomIndexSoal = Random.Range(0, soal.Length); //pengacakan
+                    print("random: " + randomIndexSoal);
+                    if (!soalSelesai[randomIndexSoal])
+                    {
+                        txtSoal.text = soalBag[randomIndexSoal, 0];
+                        txtOpsiA.text = soalBag[randomIndexSoal, 1];
+                        txtOpsiB.text = soalBag[randomIndexSoal, 2];
+                        txtOpsiC.text = soalBag[randomIndexSoal, 3];
+                        txtOpsiD.text = soalBag[randomIndexSoal, 4];
+                        kunciJ = soalBag[randomIndexSoal, 5][0];
 
-                ambilSoal = false;
+                        soalSelesai[randomIndexSoal] = true;
+                        ambilSoal = false;
+                        break;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
             }
 
         }
